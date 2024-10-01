@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry, Docy 💔</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            overflow: hidden;
+        }
+        .apology-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            position: relative;
+        }
+        .apology-box h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ff6347;
+        }
+        .apology-box p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        .hearts {
+            font-size: 3em;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #ff1493;
+            transform: scale(1.05);
+        }
+        .flying-heart {
+            position: absolute;
+            font-size: 50px;
+            color: #ff69b4;
+            animation: moveHeart 8s infinite;
+        }
+
+        @keyframes moveHeart {
+            0% { top: 10%; left: 10%; }
+            25% { top: 10%; left: 80%; }
+            50% { top: 80%; left: 80%; }
+            75% { top: 80%; left: 10%; }
+            100% { top: 10%; left: 10%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="flying-heart">❤️</div>
+
+    <div class="apology-box">
+        <h1>Sorry, Docy 💔</h1>
+        <p>I never meant to hurt you. Please forgive me! 🙏</p>
+        <div class="hearts">❤️❤️❤️</div>
+        <div class="buttons">
+            <button class="button" onclick="acceptApology()">Yes, I will forgive you! 💖</button>
+            <button class="button" onclick="noApology()">No, momo khilana padega 🍜</button>
+            <button class="button" onclick="noApology()">Riswat lagega 💸</button>
+            <button class="button" onclick="noApology()">Maafi free mein nahi milega 😜</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptApology() {
+            alert("Yay! Thank you so much, I owe you big time! 💖");
+        }
+
+        function noApology() {
+            alert("Uh-oh! Looks like I have to work harder for forgiveness! 😅");
+        }
+    </script>
+</body>
+</html>
